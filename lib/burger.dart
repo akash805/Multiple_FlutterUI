@@ -18,6 +18,72 @@ class Burger extends StatelessWidget {
   }
 }
 
+class FoodItem {
+  final String name;
+  final String category;
+  final String imagePath;
+
+  FoodItem({required this.name, required this.category, required this.imagePath});
+}
+
+List<FoodItem> foodItems = [
+  FoodItem(name: 'Margherita Pizza', category: 'pizza', imagePath: 'assets/pizza1.png'),
+  FoodItem(name: 'Pepperoni Pizza', category: 'pizza', imagePath: 'assets/pizza2.png'),
+  FoodItem(name: 'BBQ Chicken Pizza', category: 'pizza', imagePath: 'assets/pizza3.png'),
+  FoodItem(name: 'Veggie Pizza', category: 'pizza', imagePath: 'assets/pizza4.png'),
+  FoodItem(name: 'Hawaiian Pizza', category: 'pizza', imagePath: 'assets/pizza5.png'),
+  FoodItem(name: 'Hawaiian Pizza', category: 'pizza', imagePath: 'assets/pizza6.png'),
+  FoodItem(name: 'Hawaiian Pizza', category: 'pizza', imagePath: 'assets/pizza7.png'),
+  FoodItem(name: 'Hawaiian Pizza', category: 'pizza', imagePath: 'assets/pizza8.png'),
+  FoodItem(name: 'Hawaiian Pizza', category: 'pizza', imagePath: 'assets/pizza9.png'),
+  FoodItem(name: 'Hawaiian Pizza', category: 'pizza', imagePath: 'assets/pizza10.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger1.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger2.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger3.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger4.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger5.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger6.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger7.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger8.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger9.png'),
+  FoodItem(name: 'Burger', category: 'burger', imagePath: 'assets/burger10.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich2.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sanwich1.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich3.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich4.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich5.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich6.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich7.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich8.png'),
+  FoodItem(name: 'Sandwich', category: 'sandwich', imagePath: 'assets/sandwich9.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries1.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries2.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries3.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries4.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries5.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries6.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries7.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries8.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries9.png'),
+  FoodItem(name: 'French Fries', category: 'french fries', imagePath: 'assets/frenchfries10.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta1.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta2.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta3.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta4.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta5.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta6.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta7.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta8.png'),
+  FoodItem(name: 'Pasta', category: 'pasta', imagePath: 'assets/pasta9.png'),
+  FoodItem(name: 'Manchurian', category: 'manchurian', imagePath: 'assets/manchurian1.png'),
+  FoodItem(name: 'Manchurian', category: 'manchurian', imagePath: 'assets/manchurian2.png'),
+  FoodItem(name: 'Manchurian', category: 'manchurian', imagePath: 'assets/manchurian3.png'),
+  FoodItem(name: 'Manchurian', category: 'manchurian', imagePath: 'assets/manchurian4.png'),
+  FoodItem(name: 'Manchurian', category: 'manchurian', imagePath: 'assets/manchurian5.png'),
+  FoodItem(name: 'Manchurian', category: 'manchurian', imagePath: 'assets/manchurian6.png'),
+  // Add more items as needed
+];
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -28,28 +94,74 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 0;
+ /* int _selectedIndex = 0;*/
+
+  String selectedCategory = "All";
+
+  List<FoodItem> get filteredItems {
+    if (selectedCategory.toLowerCase() == 'all') {
+      return foodItems;
+    } else {
+      return foodItems.where((item) => item.category.toLowerCase() == selectedCategory.toLowerCase()).toList();
+    }
+  }
 
 
-  String selectedLabel = "All";
-
-  // List of images for the cards
-  final List<String> imagePaths = [
-    'assets/burger1.png',
-    'assets/burger2.png',
-    'assets/burger3.png',
-    'assets/burger4.png',
-    'assets/burger5.png',
-  ];
-
-  void selectCard(String label) {
+  void updateCategory(String category) {
     setState(() {
-      selectedLabel = label;
+      selectedCategory = category;
+    });
+  }
+
+ /* String getTitleText() {
+    return '$selectedCategory Show';
+  }
+*/
+  // Category-wise images and names
+  /*final Map<String, List<Map<String, String>>> itemsByCategory = {
+    'All': [
+      {'image': 'assets/burger1.png', 'name': 'Classic Burger'},
+      {'image': 'assets/pizza1.png', 'name': 'Margherita Pizza'},
+      {'image': 'assets/sanwich1.png', 'name': 'Grilled Sandwich'},
+      {'image': 'assets/sandwich2.png', 'name': 'Grilled Sandwich'},
+    ],
+    'Burger': [
+      {'image': 'assets/burger1.png', 'name': 'Classic Burger'},
+      {'image': 'assets/burger2.png', 'name': 'Cheese Burger'},
+      {'image': 'assets/burger3.png', 'name': 'Double Burger'},
+    ],
+    'Pizza': [
+      {'image': 'assets/pizza1.png', 'name': 'Margherita Pizza'},
+      {'image': 'assets/pizza2.png', 'name': 'Pepperoni Pizza'},
+      {'image': 'assets/pizza3.png', 'name': 'Veggie Pizza'},
+    ],
+    'Sandwich': [
+      {'image': 'assets/sandwich1.png', 'name': 'Grilled Sandwich'},
+      {'image': 'assets/sandwich2.png', 'name': 'Chicken Sandwich'},
+      {'image': 'assets/sandwich3.png', 'name': 'Club Sandwich'},
+    ],
+  };*/
+
+  // Filtered list based on selected category
+
+  // Filtered list based on selected category
+  /*List<FoodItem> get filteredItems {
+    if (selectedCategory == 'All') {
+      return foodItems;
+    } else {
+      return foodItems.where((item) => item.category == selectedCategory).toList();
+    }
+  }
+*/
+
+  void selectCard(String label){
+    setState(() {
+      selectedCategory = label;
     });
   }
 
   Color getCardColor(String label) {
-    return label == selectedLabel
+    return label == selectedCategory
         ? const Color.fromARGB(255, 142, 13, 13)
         : Colors.grey;
   }
@@ -61,23 +173,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 30, top: 20),
-                  child: CircleAvatar(
+            const Padding(
+              padding: EdgeInsets.only(left: 28, right: 28),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CircleAvatar(
                     radius: 20,
                     backgroundImage: NetworkImage(
                         'https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                     backgroundColor: Colors.transparent,
                   ),
-                ),
-                SizedBox(
-                  height: 140,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 280, top: 20),
-                  child: Stack(
+                  SizedBox(
+                    height: 140,
+                  ),
+                  Stack(
                     alignment: Alignment.topRight,
                     children: [
                       Icon(
@@ -95,11 +205,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 30, top: 16),
+              padding: EdgeInsets.only(left: 30, top: 10),
               child: Text(
                 "Choose",
                 style: TextStyle(
@@ -119,8 +229,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              padding: const EdgeInsets.only(left: 28, right: 28),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     child: TextField(
@@ -175,30 +286,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 26),
-                  child: Text("Popular Food",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 226),
-                  child: Text("See All",
+
+            // Dynamically updated title
+            const Padding(
+              padding: EdgeInsets.only(left: 28, right: 28),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Popular Food",
+                      style: TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text("See All",
                       style: TextStyle(
                           color: Color.fromARGB(255, 142, 13, 13),
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold)),
-                ),
-              ],
+                ],
+              ),
             ),
+
+            //Display filtered food items
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(
-                  imagePaths.length,
+                  filteredItems.length,
                   (index) => Padding(
                     padding: const EdgeInsets.only(left: 8, top: 20),
                     child: SizedBox(
@@ -220,31 +333,36 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             Image.asset(
-                              imagePaths[index],
+                              filteredItems[index].imagePath,
                               width: 180,
                               height: 140,
-                              fit: BoxFit.cover,
+                             // fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) {
+                                return const Icon(Icons.error, color: Colors.red);
+                              },
                             ),
+
                             const SizedBox(height: 10),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 14),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 14),
                               child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
-                                  "Hamburger",
-                                  style: TextStyle(
+                                  filteredItems[index].name,
+                                  style: const TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
                             ),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 14),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 14),
                               child: Align(
                                 alignment: Alignment.centerLeft,
                                 child: Text(
-                                  "Burger",
-                                  style: TextStyle(
+                                  selectedCategory,
+                                  style: const TextStyle(
                                       fontSize: 12, color: Colors.grey),
                                 ),
                               ),
@@ -282,23 +400,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 26, top: 30),
-                  child: Text("Popular Food",
+             const Padding(
+              padding: EdgeInsets.only(left: 28, right: 28, top: 26),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Nearest Food",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 226, top: 30),
-                  child: Text("See All",
+                  Text("See All",
                       style: TextStyle(
                           color: Color.fromARGB(255, 142, 13, 13),
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold)),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(),
             SingleChildScrollView(
@@ -306,8 +422,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(
-                  imagePaths.length,
-                  (index) => Padding(
+                  filteredItems.length,
+                      (index) => Padding(
                     padding: const EdgeInsets.only(left: 8, top: 20),
                     child: SizedBox(
                       height: 280,
@@ -330,31 +446,30 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ),
                                 Image.asset(
-                                  imagePaths[index],
+                                  filteredItems[index].imagePath,
                                   width: 180,
                                   height: 140,
-                                  fit: BoxFit.cover,
+                                //  fit: BoxFit.cover,
                                 ),
                                 const SizedBox(height: 10),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 14),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 14),
                                   child: Align(
                                     alignment: Alignment.centerLeft,
                                     child: Text(
-                                      "Hamburger",
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold),
+                                      filteredItems[index].name,
+                                      style: const TextStyle(
+                                          fontSize: 15, fontWeight: FontWeight.bold),
                                     ),
                                   ),
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 14),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 14),
                                   child: Align(
                                     alignment: Alignment.centerLeft,
                                     child: Text(
-                                      "Burger",
-                                      style: TextStyle(
+                                      selectedCategory,
+                                      style: const TextStyle(
                                           fontSize: 12, color: Colors.grey),
                                     ),
                                   ),
@@ -362,13 +477,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 const Row(
                                   children: [
                                     Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 14, top: 12),
+                                      padding: EdgeInsets.only(left: 14, top: 12),
                                       child: Text(
                                         "Rs.250.0",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 12),
+                                            fontWeight: FontWeight.bold, fontSize: 12),
                                       ),
                                     ),
                                     SizedBox(
@@ -395,6 +508,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+
             const SizedBox(
               height: 20,
             ),
@@ -414,12 +528,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Icon(Icons.shopping_cart, color: Colors.white),
             Icon(Icons.person, color: Colors.white),
           ],
-          onTap: (index) {
+
+         /* onTap: (index) {
             setState(() {
               _selectedIndex = index;
             });
             // Handle navigation to different screens if needed
-          }),
+          }*/),
     );
   }
 
